@@ -1,0 +1,13 @@
+@using DojoSurveyValidation.Models
+@model Survey
+
+<center>
+<h1>Submitted Info</h1>
+<div style="width: 20%; ">
+    <p style="text-align: left;">Name: @Model.nameField </p>
+    <p style="text-align: left;">Dojo Location: @Model.locaField </p>
+    <p style="text-align: left;">Fav Location: @Model.langField </p> 
+    <p style="text-align: left;">Comment: @Model.commField </p><br>
+</div>
+<a href="/"><button class="btn btn-primary">Back</button></a>
+</center>

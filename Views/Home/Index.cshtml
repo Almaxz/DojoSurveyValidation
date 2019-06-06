@@ -1,0 +1,55 @@
+﻿@using DojoSurveyValidation.Models
+@model Survey
+
+<center>
+
+    <div style="border: 3px solid black; width: 40%;">
+        <h1>Dojo Survey M</h1><br>
+
+        <form asp-action="Result" asp-controller="Home" method="post">
+            <div style="text-align: left; margin-left: 25%;">
+                <p><span asp-validation-for="nameField"></span></p>
+                <p><span asp-validation-for="locaField"></span></p>
+                <p><span asp-validation-for="langField"></span></p>
+                <p><span asp-validation-for="commField"></span></p>
+            </div><br>
+
+            <div class="form-group">
+                <label asp-for="nameField" ></label>
+                <input asp-for="nameField" placeholder="Enter a Name"/>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="locaField"></label>
+                <select asp-for="locaField">
+                    <option value=""></option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angelos">Los Angelos</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Tysons Corner">Tysons Corner</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="langField"></label>
+                <select asp-for="langField">
+                    <option value=""></option>
+                    <option value="Python">Python</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="C#">CSharp</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Perl">Perl</option>
+                    <option value="HTML">HTML</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="commField" style="margin-right: 19%;"></label><br>
+                <textarea asp-for="commField" cols="30" rows="10" placeholder="Enter a Comment"></textarea><br>
+            </div>
+            <input type="submit" class="btn btn-primary" />
+        </form><br>
+    </div>
+</center>
